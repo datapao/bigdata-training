@@ -1,1 +1,1 @@
-hadoop jar streaming.jar -input birdstrikes.csv -output counts.txt -mapper mapper.sh -reducer reducer.py -numReduceTasks 10 -file mapper.sh -file reducer.py
+hadoop jar /opt/hadoop-2.8.4/share/hadoop/tools/lib/hadoop-streaming-2.8.4.jar -input birdstrikes.csv -output counts.txt -mapper mapper.sh -reducer reducer.py -numReduceTasks 10 -file mapper.sh -file reducer.py

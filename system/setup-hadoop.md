@@ -1,7 +1,13 @@
+# How to set up Hadoop for trainings.
+## Requirements
+OS: Ubuntu
 
-3. Set `JAVA_HOME` in `/opt/hadoop/etc/hadoop-env.sh`
+## Steps
+1. Run `setup-hadoop.sh`
+2. Set `JAVA_HOME` in `/opt/hadoop/etc/hadoop-env.sh`
 Current setup has a `JAVA_HOME`: `/usr/lib/jvm/java-8-openjdk-amd64`
-4. Add the following to the `.bashrc`
+
+3. Add the following to the `.bashrc`
 ```
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export HADOOP_HOME=/opt/hadoop-2.8.4
@@ -17,7 +23,7 @@ export LD_LIBRARY_PATH=$HADOOP_HOME/lib/native
 export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
 ```
 
-5. Generate SSH key
+4. Generate SSH key
 ```
 rm -f ~/.ssh/authorized_keys ~/.ssh/id_rsa ~/.ssh/id_rsa.pub
 rm -f /home/ubuntu/.ssh/known_hosts
@@ -27,7 +33,7 @@ chmod 0600 ~/.ssh/authorized_keys
 ```
 
 ```
-6. Set the replication with HDFS in `hdfs-site.xml`
+5. Set the replication with HDFS in `hdfs-site.xml`
 ```
 <configuration>
     <property>
@@ -44,7 +50,8 @@ chmod 0600 ~/.ssh/authorized_keys
     </property>
 </configuration>
 ```
-7. Set `etc/hadoop/core-site.xml`:
+
+6. Set `etc/hadoop/core-site.xml`:
 ```
 <configuration>
     <property>
@@ -54,7 +61,7 @@ chmod 0600 ~/.ssh/authorized_keys
 </configuration>
 ```
 
-8. Set up `yarn-site.xml`
+7. Set up `yarn-site.xml`
 ```
 <configuration>
     <property>
@@ -72,5 +79,5 @@ chmod 0600 ~/.ssh/authorized_keys
 </configuration>
 ```
 
-9. Run the following:
+8. Run the following:
 `hadoop namenode -format`

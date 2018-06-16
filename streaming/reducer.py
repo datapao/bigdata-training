@@ -21,4 +21,4 @@ def read_group():
 
 for key, values in read_group():
     avg_values = sum(values)/len(values)
-    print "%s\t%s\t%s" % (key, avg_values, sum(values))
+    print("%s\t%s\t%s" % (key, avg_values, sum(values)))

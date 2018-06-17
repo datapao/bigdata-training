@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys
 
@@ -22,4 +22,4 @@ def read_group():
 for key, values in read_group():
     values = map(int, values)
     user_id = int(key)
-    print "%d,%d" % (user_id, sum(values))
+    print("%d,%d" % (user_id, sum(values)))

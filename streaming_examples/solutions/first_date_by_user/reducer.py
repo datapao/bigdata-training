@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys
 
@@ -22,4 +22,4 @@ def read_group():
 for key, values in read_group():
     user_id = int(key)
     first_date = sorted(values)[0]
-    print "%d,%s" % (user_id, first_date)
+    print("%d,%s" % (user_id, first_date))

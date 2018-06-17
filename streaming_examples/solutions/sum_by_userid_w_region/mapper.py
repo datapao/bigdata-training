@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys
 import os
@@ -31,7 +31,7 @@ for line in sys.stdin:
         if date < "2015-01-01" or date >= "2015-05-01":
             continue
 
-        print "%s\tpayment\t%s" % (user_id, amount)
+        print("%s\tpayment\t%s" % (user_id, amount))
     else:
-        print >>sys.stderr, "Unexpected input file: %s" % filename
+        print(>>sys.stderr, "Unexpected input file: %s" % filename)
         exit(1)

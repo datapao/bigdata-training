@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys
 
@@ -32,4 +32,4 @@ for key, values in read_group():
         elif data_type == "payment":
             total_payment += int(payload)
 
-    print "%s\tpayment\t%d" % (user_id, total_payment)
+    print("%s\tpayment\t%d" % (user_id, total_payment))

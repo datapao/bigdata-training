@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys
 
@@ -9,4 +9,4 @@ for line in sys.stdin:
     date = d[0]
     user_id = d[1]
 
-    print user_id + "\t" + date
+    print(user_id + "\t" + date)

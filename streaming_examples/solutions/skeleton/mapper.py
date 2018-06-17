@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys
 
@@ -9,4 +9,4 @@ for line in sys.stdin:
     key = d[0] 
     value = d[1]
 
-    print key + "\t" + value
+    print(key + "\t" + value)

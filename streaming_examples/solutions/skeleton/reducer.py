@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys
 
@@ -20,4 +20,4 @@ def read_group():
 
 
 for key, values in read_group():
-    print "%s\t%s" % (key, str(values))
+    print("%s\t%s" % (key, str(values)))
